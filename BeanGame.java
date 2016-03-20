@@ -10,14 +10,19 @@ import javafx.scene.Group;
 
 public class BeanGame extends Application{
 	public void start(Stage primaryStage){
+		//creat pain
 		Group group = new Group();
 		
+		//add button "開始遊戲"
 		Button btn = new Button("開始遊戲");
+		
+		//set button location,size
 		btn.setMinSize(25, 25);
 		btn.setTranslateX(235);
 		btn.setTranslateY(0);
 		group.getChildren().add(btn);
 		
+		//draw lines to the pain
 		Line a1 = new Line(15, 360, 300, 390);
 		group.getChildren().add(a1);
 		
@@ -51,6 +56,7 @@ public class BeanGame extends Application{
 		Line a11 = new Line(225, 250, 225, 330);
 		group.getChildren().add(a11);
 		
+		//draw Circle barriers to pain
 		Circle c51 = new Circle(50, 235, 6);
 		group.getChildren().add(c51);
 		
@@ -148,10 +154,13 @@ public class BeanGame extends Application{
 		group.getChildren().add(c16);
 		
 		
-		
+		//set the size of the pain
 		Scene scene = new Scene(group, 300, 400);
+		
+		//title
 		primaryStage.setTitle("打彈珠");
 		primaryStage.setScene(scene);
+		//can't control the screen bigger or smaller
 		primaryStage.setResizable(false);
 		primaryStage.show();
 	}
